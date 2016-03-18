@@ -8,10 +8,7 @@ class Employee
   end
 end
 
-zeke_hash = { name: "Zeke", phone: "703.321.3434", email: "zeke@gmail.com",  salary: 40000 }
 
-
-zeke = Employee.new(zeke_hash)
 
 
 # employee_store = {
@@ -19,23 +16,3 @@ zeke = Employee.new(zeke_hash)
 #   emp_3 => { name => "Xavier", email => "xman987@hotmail.com", phone => "804.585.9900", salary => 50000 },
 #   emp_4 => { name => "Wanda", email => "magicwanda@aol.com", phone => "703.450.5292", salary => 65000}
 # }
-
-
-
-#
-# def name
-#   emp_name = employee[name]
-# end
-#
-# def email
-# end
-#
-# def phone
-# end
-#
-# def salary
-# end
-#
-# def employee_lookup
-# end
-#
