@@ -18,4 +18,9 @@ class EmployeeTest < Minitest::Test
     assert_equal 42000, zeke.salary
   end
 
+  def test_can_review_employee
+    zeke = Employee.new(name: "Zeke", phone: "703.321.3434", email: "zeke@gmail.com",  salary: 40000)
+    assert_equal "bad", zeke.review = "bad"
+    assert_equal "bad", zeke.review 
+  end
 end

@@ -1,5 +1,6 @@
 class Employee
   attr_reader :name, :phone, :email, :salary
+  attr_accessor :review
   def initialize(name:, phone:, email:, salary:)
     @name = name
     @phone = phone
@@ -11,8 +12,10 @@ class Employee
     @salary = (@salary.to_f * percentage) + salary
   end
 
+  def review=(review)
+    @review = review
+  end
 end
-
 
 
 
