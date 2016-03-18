@@ -11,10 +11,6 @@ class Employee
   def give_raise(percentage)
     @salary = (@salary.to_f * percentage) + salary
   end
-
-  def review=(review)
-    @review = review
-  end
 end
 
 

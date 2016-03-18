@@ -1,7 +1,7 @@
 require './employee'
 
 class Department
-attr_reader :name
+attr_reader :name, :employees
   def initialize(name)
     @name = name
   end
@@ -9,9 +9,5 @@ attr_reader :name
   def add_employee(employee:)
     @employees = []
     @employees << employee
-  end
-
-  def employees
-    @employees
   end
 end
