@@ -6,6 +6,11 @@ class Employee
     @email = email
     @salary = salary
   end
+
+  def give_raise(percentage)
+    @salary = (@salary.to_f * percentage) + salary
+  end
+
 end
 
 
