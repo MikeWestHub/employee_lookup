@@ -1,6 +1,6 @@
 class Employee
   attr_reader :name, :phone, :email, :salary
-  attr_accessor :review
+  attr_accessor :review, :employee_status
   def initialize(name:, phone:, email:, salary:)
     @name = name
     @phone = phone
@@ -10,6 +10,10 @@ class Employee
 
   def give_raise(percentage)
     @salary = (@salary.to_f * percentage) + salary
+  end
+
+  def employee_status=(employee_status) #satisfactory or unsatisfactory
+    @employee_status = employee_status
   end
 end
 
