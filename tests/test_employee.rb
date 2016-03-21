@@ -26,6 +26,6 @@ class EmployeeTest < Minitest::Test
 
   def test_can_mark_employee_satisfactory_or_not
     zeke = Employee.new(name: "Zeke", phone: "703.321.3434", email: "zeke@gmail.com",  salary: 40000)
-    assert_equal "Satisfactory", zeke.employee_status = "Satisfactory"
+    assert_equal "satisfactory", zeke.employee_status = "satisfactory"
   end
 end

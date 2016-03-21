@@ -29,4 +29,18 @@ class DepartmentTest < Minitest::Test
     product.add_employee(employee: yvonne)
     assert_equal 75000, product.salary_total
   end
+
+  def text_can_give_department_raise
+    zeke_hash = { name: "Zeke", phone: "703.321.3434", email: "zeke@gmail.com",  salary: 40000 }
+    zeke = Employee.new(zeke_hash)
+    yvonne_hash = { name: "Yvonne", phone: "757.343.7888", email: "yv123@me.com", salary: 35000 }
+    yvonne = Employee.new(yvonne_hash)
+    zeke.employee_status = "unsatisfactory"
+    yvonne.employee_status = "satisfactory"
+    product = Department.new("Product")
+    product.add_employee(employee: zeke)
+    product.add_employee(employee: yvonne)
+    product.dept_raise(2000)
+    assert_equal 77000, product.salary_total
+  end
 end
