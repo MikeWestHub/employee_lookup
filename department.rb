@@ -1,13 +1,22 @@
-require './employee'
-
 class Department
-attr_reader :name, :employees
-  def initialize(name)
-    @name = name
+attr_reader :department, :employees
+  def initialize(department)
+    @employees = []
+    @department = department
   end
 
   def add_employee(employee:)
-    @employees = []
     @employees << employee
+  end
+
+  def salary_total
+    @employees.reduce(0) {|sum, employee| sum + employee.salary}
+  end
+
+  def dept_raise(bonus)
+    good_employees = @employers.select { |employee| employee.employee_status == "satisfactory" }
+    good_employees.each do |employee|
+      employee.salary += bonus
+    end
   end
 end
